@@ -86,9 +86,9 @@
 
             <p> Contact us on Facebook, Twitter, and Instagram!</p>
         </div>
-        <a href="somefile.php"><img src="twitter.png" style="width: 50px; height: 50px"></a>
-        <a href="somefile.php"><img src="facebook.png" style="width: 50px; height: 50px"></a>
-        <a href="somefile.php"><img src="instagram.png" style="width: 50px; height: 50px"></a>
+        <a href="somefile.php"><img src="fishrus/FishRUs/static/img/twitter.png" style="width: 50px; height: 50px"></a>
+        <a href="somefile.php"><img src="fishrus/FishRUs/static/img/facebook.png" style="width: 50px; height: 50px"></a>
+        <a href="somefile.php"><img src="fishrus/FishRUs/static/img/instagram.png" style="width: 50px; height: 50px"></a>
 
 <!--- Scripting --->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
