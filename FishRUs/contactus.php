@@ -70,7 +70,7 @@
         <div class="col-md-12">
             <h2> Email</h2>
 
-            <p> fishrus@fish.com</p>
+            <p> <a href="somefile.com"> fishrus@fish.com</a></p>
         </div>
 
         <!--- Phone --->
