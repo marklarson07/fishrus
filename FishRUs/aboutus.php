@@ -69,7 +69,7 @@
         <!--- Contact Us --->
         <div class="col-md-4">
             <h2 style="margin-left: 45px"> <a href="contactus.php"> Superior Service</a></h2>
-            <p style="margin-left: 45px"> <a href="contactus.php"><img src="service.jpg" style="width: 270px; height: 250px"></a></p>
+            <p style="margin-left: 45px"> <a href="contactus.php"><img src="fishrus/FishRUs/static/img/service.jpg" style="width: 270px; height: 250px"></a></p>
             <p style="width: 270px; height: 250px; margin-left: 45px"> Our customers will always be our #1 priority. We constantly strive to provide our customers with the best possible
             shopping experience. With our service guarantee, we promise that our customers' concerns will be addressed within one business day.</p>
             <hr class="hidden-sm hidden-md hidden-lg">
@@ -78,7 +78,7 @@
         <!--- Fish Supplies --->
         <div class="col-md-4">
             <h2 style="margin-left: 45px"> <a href="shopsupplies.php"> Quality Products</a></h2>
-            <p style="margin-left: 45px"> <a href="shopsupplies.php"><img src="food.jpg" style="width: 270px; height: 250px"></a></p>
+            <p style="margin-left: 45px"> <a href="shopsupplies.php"><img src="fishrus/FishRUs/static/img/food.jpg" style="width: 270px; height: 250px"></a></p>
             <p style="width: 270px; height: 250px; margin-left: 45px"> We hold our suppliers to the highest standards! We only sell food products that are verified through the Department of Agriculture to
             to be free of hormones and antibiotics. We strive to ensure that you only feed your pet fish high quality food. </p>
         </div>
@@ -86,7 +86,7 @@
         <!--- Fish  --->
         <div class="col-md-4">
             <h2 style="margin-left: 45px"> <a href="shopfish.php"> Healthy Fish</a></h2>
-            <p style="margin-left: 45px"> <a href="shopfish.php"><img src="fish.jpg" style="width: 270px; height: 250px"></a></p>
+            <p style="margin-left: 45px"> <a href="shopfish.php"><img src="fishrus/FishRUs/static/img/fish.jpg" style="width: 270px; height: 250px"></a></p>
 
             <p style="width: 270px; height: 250px; margin-left: 45px"> Our fish are raised healthy from day one. We ensure that our fish are raised with high quality food free of fillers,
             antibiotics, and hormones, ensuring any fish you get from Fish R' Us will live a long and healthy life.</p>
