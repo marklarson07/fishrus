@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>About Us</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
@@ -45,56 +44,44 @@
         </ul>
     </div>
 </nav>
-
 <!--- Content enter body here --->
 <div class="jumbotron jumbotron-fluid text-center">
     <div class="container">
         <h1>About Us</h1>
-
     </div>
 </div>
-
 <!--- About Us --->
 <div class="container">
     <h4 style="color: dimgray" style="font-style: normal"> At Fish R' Us, we live by three core principals: deliver exceptional customer service, provide healthy and happy fish to our customers, and provide superior quality
         products at a great price.<br><br></h4>
 </div>
-
 <br>
-
-
 <div class="container">
     <div class="row">
-
         <!--- Contact Us --->
         <div class="col-md-4">
             <h2 style="margin-left: 45px"> <a href="contactus.php"> Superior Service</a></h2>
-            <p style="margin-left: 45px"> <a href="contactus.php"><img src="fishrus/FishRUs/static/img/service.jpg" style="width: 270px; height: 250px"></a></p>
+            <p style="margin-left: 45px"> <a href="contactus.php"><img src="static/img/service.jpg" style="width: 270px; height: 250px"></a></p>
             <p style="width: 270px; height: 250px; margin-left: 45px"> Our customers will always be our #1 priority. We constantly strive to provide our customers with the best possible
-            shopping experience. With our service guarantee, we promise that our customers' concerns will be addressed within one business day.</p>
+                shopping experience. With our service guarantee, we promise that our customers' concerns will be addressed within one business day.</p>
             <hr class="hidden-sm hidden-md hidden-lg">
         </div>
-
         <!--- Fish Supplies --->
         <div class="col-md-4">
             <h2 style="margin-left: 45px"> <a href="shopsupplies.php"> Quality Products</a></h2>
-            <p style="margin-left: 45px"> <a href="shopsupplies.php"><img src="fishrus/FishRUs/static/img/food.jpg" style="width: 270px; height: 250px"></a></p>
+            <p style="margin-left: 45px"> <a href="shopsupplies.php"><img src="static/img/food.jpg" style="width: 270px; height: 250px"></a></p>
             <p style="width: 270px; height: 250px; margin-left: 45px"> We hold our suppliers to the highest standards! We only sell food products that are verified through the Department of Agriculture to
-            to be free of hormones and antibiotics. We strive to ensure that you only feed your pet fish high quality food. </p>
+                to be free of hormones and antibiotics. We strive to ensure that you only feed your pet fish high quality food. </p>
         </div>
-
         <!--- Fish  --->
         <div class="col-md-4">
             <h2 style="margin-left: 45px"> <a href="shopfish.php"> Healthy Fish</a></h2>
-            <p style="margin-left: 45px"> <a href="shopfish.php"><img src="fishrus/FishRUs/static/img/fish.jpg" style="width: 270px; height: 250px"></a></p>
-
+            <p style="margin-left: 45px"> <a href="shopfish.php"><img src="static/img/fish.jpg" style="width: 270px; height: 250px"></a></p>
             <p style="width: 270px; height: 250px; margin-left: 45px"> Our fish are raised healthy from day one. We ensure that our fish are raised with high quality food free of fillers,
-            antibiotics, and hormones, ensuring any fish you get from Fish R' Us will live a long and healthy life.</p>
+                antibiotics, and hormones, ensuring any fish you get from Fish R' Us will live a long and healthy life.</p>
         </div>
-
     </div>
 </div>
-
 <!--- Scripting --->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

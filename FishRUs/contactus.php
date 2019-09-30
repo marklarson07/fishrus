@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Contact Us</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
@@ -45,57 +44,42 @@
         </ul>
     </div>
 </nav>
-
 <!--- Content enter body here --->
 <div class="jumbotron jumbotron-fluid text-center">
     <div class="container">
         <h1>Contact Us</h1>
-
     </div>
 </div>
-
 <!--- Contact Us --->
 <div class="container" style="margin-left: 165px">
-
     <h4 style="color: dimgray" style="font-style: normal"> We would love to hear from you!</h4>
 </div>
-
 <br>
-
 <div class="container">
     <div class="column">
-
-
         <!--- Email --->
         <div class="col-md-12">
             <h2> Email</h2>
-
             <p> <a href="somefile.com"> fishrus@fish.com</a></p>
         </div>
-
         <!--- Phone --->
         <div class="col-md-12">
             <h2> Phone</h2>
-
             <p> Toll Free: <br>(800) 555-1234</p>
         </div>
-
         <!--- Social Media --->
         <div class="col-md-12">
             <h2> Social Media</h2>
-
             <p> Contact us on Facebook, Twitter, and Instagram!</p>
         </div>
-        <a href="somefile.php"><img src="fishrus/FishRUs/static/img/twitter.png" style="width: 50px; height: 50px"></a>
-        <a href="somefile.php"><img src="fishrus/FishRUs/static/img/facebook.png" style="width: 50px; height: 50px"></a>
-        <a href="somefile.php"><img src="fishrus/FishRUs/static/img/instagram.png" style="width: 50px; height: 50px"></a>
-
+        <a href="somefile.php"><img src="static/img/twitter.png" style="width: 50px; height: 50px"></a>
+        <a href="somefile.php"><img src="static/img/facebook.png" style="width: 50px; height: 50px"></a>
+        <a href="somefile.php"><img src="static/img/instagram.png" style="width: 50px; height: 50px"></a>
     </div>
 </div>
-        <!--- Scripting --->
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
+<!--- Scripting --->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>
