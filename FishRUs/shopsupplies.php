@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Shop Supplies</title>
+    <title>Shop Fish</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css" >
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -52,86 +52,102 @@
     </div>
 </div>
 <div class="container">
-    <p>Here you can buy all of the fishing supplies that you need. <br><br></p>
+    <p>Here is where you can buy all the fish supplies that you would like to buy! Be sure to choose as many as you can. We have products for everything you need.<br><br></p>
 </div>
 
-<!--Images and buttons for fish pictures-->
-<center>
-    <img src='static/img/FishTankSunkShip.jpeg' style="width:190px;height:175px;"> <br>Fish Tank Sunk Ship </img>
-
-    <form action="cart.php" method='post'><center><br>
-            Select Quantity
-            <input type='number' name='quantity' min='1' max= '99' value='0'><center> <p style='padding-right: 5px;'></p>
-                <input type='submit' value='Purchase'><br><br><br>
-
-    </form>
-
-    <img src='static/img/Aquarium.jpeg' style="width:190px;height:175px;"> <br><br>Aquarium </img>
-
-    <form action="cart.php" method='post'><center><br>
-            Select Quantity
-            <input type='number' name='quantity' min='1' max= '99' value='0'><center> <p style='padding-right: 5px;'></p>
-                <input type='submit' value='Purchase'><br><br><br>
-
-    </form>
-
-    <img src='static/img/FishBowl.jpeg' style="width:190px;height:175px;"> <br><br> Fish Bowl </img>
-
-    <form action="cart.php" method='post'><center><br>
-            Select Quantity
-            <input type='number' name='quantity' min='1' max= '99' value='0'><center> <p style='padding-right: 5px;'></p>
-                <input type='submit' value='Purchase'><br><br><br>
-
-    </form>
-
-    <img src='static/img/Filter.jpeg' style="width:190px;height:175px;"> <br><br> Filter </img>
-
-    <form action="cart.php" method='post'><center><br>
-            Select Quantity
-            <input type='number' name='quantity' min='1' max= '99' value='0'><center> <p style='padding-right: 5px;'></p>
-                <input type='submit' value='Purchase'><br><br><br>
-
-    </form>
-
-    <img src='static/img/BeginnersSupplies.jpeg' style="width:190px;height:175px;"> <br><br> Supplies for Beginners </img>
-
-    <form action="cart.php" method='post'><center><br>
-            Select Quantity
-            <input type='number' name='quantity' min='1' max= '99' value='0'><center> <p style='padding-right: 5px;'></p>
-                <input type='submit' value='Purchase'><br><br><br>
-
-    </form>
-
-    <img src='static/img/WaterHeater.jpeg' style="width:190px;height:175px;"> <br><br> Water Heater </img>
-
-    <form action="cart.php" method='post'><center><br>
-            Select Quantity
-            <input type='number' name='quantity' min='1' max= '99' value='0'><center> <p style='padding-right: 5px;'></p>
-                <input type='submit' value='Purchase'><br><br><br>
-
-    </form>
-
-    <img src='static/img/FishNet.jpeg' style="width:190px;height:175px;"> <br><br> Fish Net </img>
-
-    <form action="cart.php" method='post'><center><br>
-            Select Quantity
-            <input type='number' name='quantity' min='1' max= '99' value='0'><center> <p style='padding-right: 5px;'></p>
-                <input type='submit' value='Purchase'><br><br><br>
-
-    </form>
-
-    <img src='static/img/CleaningChemical.jpeg' style="width:190px;height:175px;"> <br><br> Cleaning Chemical </img>
-
-    <form action="cart.php" method='post'><center><br>
-            Select Quantity
-            <input type='number' name='quantity' min='1' max= '99' value='0'><center> <p style='padding-right: 5px;'></p>
-                <input type='submit' value='Purchase'><br><br><br>
-
-    </form>
 </center>
     <!--- Scripting --->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
+
+
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Add to Cart</title>
+
+</head>
+
+<br>
+
+<style type="text/css">
+    h1 {
+
+        text-align: center;
+    }
+    body{
+
+        text-align: center;
+
+    }
+</style>
+
+<body>
+
+
+<?php
+
+REQUIRE_ONCE 'login.php';
+
+$conn = new mysqli($hn, $un, $pw, $db);
+if ($conn->connect_error) die($conn->connect_error);
+
+$query = "SELECT * FROM fish_supplies";
+$result = $conn->query($query);
+if (!$result) die($conn->error);
+
+$rows = $result->num_rows;
+
+for ($j = 0; $j < $rows; ++$j) {
+    $result->data_seek($j);
+    $row = $result->fetch_array(MYSQLI_NUM);
+    echo <<<_END
+<img height='150' width='300' src="static/img/fish.png"  alt="text">
+_END;
+
+    echo<<<_END
+
+
+<pre>
+
+<style type="text/css">
+    h1 {
+
+        text-align: center;
+    }
+    body{
+
+        text-align: center;
+    }
+    p.thick {
+  font-weight: bold;
+}
+
+</style>
+
+
+   Item Type: $row[3]. 
+   
+   Please call for pricing and inventory.
+   
+  Quantity in Stock: $row[2]
+    
+</pre>
+
+
+<form action="cart.php" method="post">
+    <input type="hidden" name="product_id" value="yes">
+    <input type="submit" name="product_id" value="Add to Cart">
+</form>    
+<br><br><br>
+
+_END;
+}
+
+
+
+
+
