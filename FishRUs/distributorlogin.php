@@ -63,16 +63,17 @@
         <div class="col-sm-4"></div>
         <div class="col-sm-4">
             <div class="mx-auto">
-                <form action="#" method="post">
+                <form method="post" name="distlogin" action="distlogincheck.php">
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Username" required="required">
+                        <input type="text" class="form-control" placeholder="username" name="username" required="required">
                     </div>
                     <div class="form-group">
-                        <input type="password" class="form-control" placeholder="Password" required="required">
+                        <input type="password" class="form-control" placeholder="password" name="password" required="required">
                     </div>
                     <div class="form-group">
-                        <button type="submit" class="btn btn-secondary btn-block">Go to Dashboard</button>
+                        <button type="submit" name="distlogin" class="btn btn-secondary btn-block">Log in</button>
                     </div>
+                </form>
             </div>
         </div>
     </div>

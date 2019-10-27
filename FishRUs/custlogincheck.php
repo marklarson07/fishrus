@@ -1,0 +1,47 @@
+
+<?php
+
+require_once 'login.php';
+
+$conn = new mysqli($hn, $un, $pw, $db);
+if ($conn->connect_error) die($conn->connect_error);
+
+
+if (isset($_POST['custlogin']))
+{
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+
+
+    $username = mysqli_real_escape_string($conn, $username);
+    $password = mysqli_real_escape_string($conn, $password);
+
+    $salt1='hg&7';
+    $salt2='kw*7';
+    $token = hash('ripemd128',"$salt1$password$salt2");
+
+    $query = "SELECT * FROM customer WHERE username = '{$username}'";
+    $select_user_query = mysqli_query($conn, $query);
+
+    if(!$select_user_query) {
+        die("QUERY FAILED" . mysqli_error($conn));
+    }
+
+    while($row = mysqli_fetch_array($select_user_query)){
+        $db_user =$row['username'];
+        $db_pass =$row['password'];
+    }
+
+    if($username !== $db_user && $token !== $db_pass){
+
+        header("Location: customerlogin.php");
+    } else if($username == $db_user && $token == $db_pass)
+    {
+        header("Location: shopfish.php");
+    } else{
+        header("Location: index.php");
+    }
+}
+
+
+?>
