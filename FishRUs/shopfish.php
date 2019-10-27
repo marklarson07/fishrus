@@ -54,79 +54,7 @@
 <div class="container">
     <p>Here is where you can buy all the types of fish that you would like to buy! Be sure to choose as many as you can. We have fish from all over the world.<br><br></p>
 </div>
-<!--Images and buttons for fish pictures-->
-<center>
-    <img src='static/img/AnglerFish.jpeg' style="width:190px;height:175px;"> <br>Angler Fish </img>
 
-    <form action="cart.php" method='post'><center><br>
-            Select Quantity
-            <input type='number' name='quantity' min='1' max= '99' value='0'><center> <p style='padding-right: 5px;'></p>
-                <input type='submit' value='Purchase'><br><br><br>
-
-    </form>
-
-    <img src='static/img/DanubeRiverFish.jpeg' style="width:190px;height:175px;"> <br><br>Danube River Fish </img>
-
-    <form action="cart.php" method='post'><center><br>
-            Select Quantity
-            <input type='number' name='quantity' min='1' max= '99' value='0'><center> <p style='padding-right: 5px;'></p>
-                <input type='submit' value='Purchase'><br><br><br>
-
-    </form>
-
-    <img src='static/img/DinosaurFish.jpeg' style="width:190px;height:175px;"> <br><br> Dinosaur Fish </img>
-
-    <form action="cart.php" method='post'><center><br>
-            Select Quantity
-            <input type='number' name='quantity' min='1' max= '99' value='0'><center> <p style='padding-right: 5px;'></p>
-                <input type='submit' value='Purchase'><br><br><br>
-
-    </form>
-
-    <img src='static/img/KoiFish.jpeg' style="width:190px;height:175px;"> <br><br> Koi Fish </img>
-
-    <form action="cart.php" method='post'><center><br>
-            Select Quantity
-            <input type='number' name='quantity' min='1' max= '99' value='0'><center> <p style='padding-right: 5px;'></p>
-                <input type='submit' value='Purchase'><br><br><br>
-
-    </form>
-
-    <img src='static/img/MauiFish.jpeg' style="width:190px;height:175px;"> <br><br> Maui Fish </img>
-
-    <form action="cart.php" method='post'><center><br>
-            Select Quantity
-            <input type='number' name='quantity' min='1' max= '99' value='0'><center> <p style='padding-right: 5px;'></p>
-                <input type='submit' value='Purchase'><br><br><br>
-
-    </form>
-
-    <img src='static/img/MongoliaFish.jpeg' style="width:190px;height:175px;"> <br><br> Mongolia Fish </img>
-
-    <form action="cart.php" method='post'><center><br>
-            Select Quantity
-            <input type='number' name='quantity' min='1' max= '99' value='0'><center> <p style='padding-right: 5px;'></p>
-                <input type='submit' value='Purchase'><br><br><br>
-
-    </form>
-
-    <img src='static/img/NemoFish.jpeg' style="width:190px;height:175px;"> <br><br> Nemo Fish </img>
-
-    <form action="cart.php" method='post'><center><br>
-            Select Quantity
-            <input type='number' name='quantity' min='1' max= '99' value='0'><center> <p style='padding-right: 5px;'></p>
-                <input type='submit' value='Purchase'><br><br><br>
-
-    </form>
-
-    <img src='static/img/WakandaFish.jpeg' style="width:190px;height:175px;"> <br><br> Wakanda Fish </img>
-
-    <form action="cart.php" method='post'><center><br>
-            Select Quantity
-            <input type='number' name='quantity' min='1' max= '99' value='0'><center> <p style='padding-right: 5px;'></p>
-                <input type='submit' value='Purchase'><br><br><br>
-
-    </form>
 </center>
     <!--- Scripting --->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -136,3 +64,113 @@
 
 
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Add to Cart</title>
+
+</head>
+
+<br>
+
+<style type="text/css">
+    h1 {
+
+        text-align: center;
+    }
+    body{
+
+        text-align: center;
+
+    }
+</style>
+
+<body>
+
+
+<?php
+
+REQUIRE_ONCE 'login.php';
+
+$conn = new mysqli($hn, $un, $pw, $db);
+if ($conn->connect_error) die($conn->connect_error);
+
+$query = "SELECT breed, product_id, quantity FROM fw_fish UNION SELECT breed, product_id, quantity FROM sw_fish UNION SELECT breed,product_id,quantity FROM fw_and_sw_fish";
+$result = $conn->query($query);
+if (!$result) die($conn->error);
+
+$rows = $result->num_rows;
+
+for ($j = 0; $j < $rows; ++$j) {
+    $result->data_seek($j);
+    $row = $result->fetch_array(MYSQLI_NUM);
+
+    if($row[1]>=20 && $row[1]<=40) {
+        echo <<<_END
+
+    <a href="cart.php?product_id=$row[0]" $row[0]><img height='150' width='300' src="static/img/fish.jpg"  alt="text"></a>
+
+
+_END;
+    }
+
+    elseif($row[1]>40 && $row[1]<60) {
+        echo <<<_END
+
+<a href="cart.php?product_id=$row[0]" $row[0]><img height='150' width='300' src="static/img/betta.jpg"  alt="text"></a>
+
+_END;
+
+    }
+
+    elseif($row[1]>=60) {
+        echo <<<_END
+
+<a href="cart.php?product_id=$row[0]" $row[0]><img height='150' width='300' src="static/img/KoiFish.jpeg"  alt="text"></a>
+
+_END;
+    }
+
+    echo<<<_END
+
+
+<pre>
+
+<style type="text/css">
+    h1 {
+
+        text-align: center;
+    }
+    body{
+
+        text-align: center;
+    }
+    p.thick {
+  font-weight: bold;
+}
+
+</style>
+
+
+   Fish Type: $row[0]. 
+   
+   Please call for pricing and inventory.
+   
+  Quantity in Stock: $row[2]
+    
+</pre>
+
+
+<form action="cart.php" method="post">
+    <input type="hidden" name="product_id" value="yes">
+    <input type="submit" name="product_id" value="Add to Cart">
+</form>    
+<br><br><br>
+
+_END;
+}
+
+
+
+
+
